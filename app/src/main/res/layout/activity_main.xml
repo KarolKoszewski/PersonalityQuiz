@@ -1,19 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical"
+    tools:context=".MainActivity">
 
-    >
-
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        />
+        android:orientation="vertical"
+        android:padding="16dp">
 
-</LinearLayout>
+        <Chronometer
+            android:id="@+id/chronometer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:textSize="18sp"
+            android:padding="8dp" />
+
+        <TextView
+            android:id="@+id/timerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pozostały czas: 30s"
+            android:textSize="16sp"
+            android:paddingBottom="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Czy często poznajesz nowych znajomych?" />
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/pytanie1_Tak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tak" />
+            <RadioButton
+                android:id="@+id/pytanie1_Nie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nie" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jakie kolory lubisz?" />
+        <CheckBox
+            android:id="@+id/checkRed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Czerwony" />
+        <CheckBox
+            android:id="@+id/checkBlue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Niebieski" />
+        <CheckBox
+            android:id="@+id/checkGreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Zielony" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jak bardzo jesteś pewny siebie? (0–10)" />
+        <SeekBar
+            android:id="@+id/seekConfidence"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="10" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wybierz swój styl:" />
+        <Spinner
+            android:id="@+id/spinnerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wybierz datę i godzinę wypełnienia quizu:" />
+
+        <DatePicker
+            android:id="@+id/datePicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TimePicker
+            android:id="@+id/timePicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:timePickerMode="spinner" />
+
+        <Button
+            android:id="@+id/btnFinish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Zakończ quiz"
+            android:layout_marginTop="16dp" />
+
+    </LinearLayout>
+</ScrollView>
