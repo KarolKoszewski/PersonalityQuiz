@@ -12,6 +12,15 @@ import org.w3c.dom.Text
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var radioGroup: RadioGroup
+    private lateinit var checkCzerwony: CheckBox
+    private lateinit var checkNiebieski: CheckBox
+    private lateinit var checkZielony: CheckBox
+    private lateinit var seekPewnosc: SeekBar
+    private lateinit var datePicker: DatePicker
+    private lateinit var timePicker: TimePicker
+    private lateinit var koniecButton: Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -21,14 +30,17 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        radioGroup = findViewById(R.id.radioGroup)
+        checkCzerwony = findViewById(R.id.checkCzerwony)
+        checkNiebieski = findViewById(R.id.checkNiebieski)
+        checkZielony = findViewById(R.id.checkZielony)
+        seekPewnosc = findViewById(R.id.seekPewnosc)
+        datePicker = findViewById(R.id.datePicker)
+        timePicker = findViewById(R.id.timePicker)
+        koniecButton = findViewById(R.id.koniec)
+
     }
 
-    private lateinit var radioGroup: RadioGroup
-    private lateinit var checkRed: CheckBox
-    private lateinit var checkBlue: CheckBox
-    private lateinit var checkGreen: CheckBox
-    private lateinit var seekConfidence: SeekBar
-    private lateinit var datePicker: DatePicker
-    private lateinit var timePicker: TimePicker
-    private lateinit var btnFinish: Button
+
+
 }

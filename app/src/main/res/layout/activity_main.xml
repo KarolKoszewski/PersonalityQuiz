@@ -54,17 +54,17 @@
             android:layout_height="wrap_content"
             android:text="Jakie kolory lubisz?" />
         <CheckBox
-            android:id="@+id/checkRed"
+            android:id="@+id/checkCzerwony"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Czerwony" />
         <CheckBox
-            android:id="@+id/checkBlue"
+            android:id="@+id/checkNiebieski"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Niebieski" />
         <CheckBox
-            android:id="@+id/checkGreen"
+            android:id="@+id/checkZielony"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Zielony" />
@@ -74,7 +74,7 @@
             android:layout_height="wrap_content"
             android:text="Jak bardzo jesteś pewny siebie? (0–10)" />
         <SeekBar
-            android:id="@+id/seekConfidence"
+            android:id="@+id/seekPewnosc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:max="10" />
@@ -97,7 +97,7 @@
             android:timePickerMode="spinner" />
 
         <Button
-            android:id="@+id/btnFinish"
+            android:id="@+id/koniec"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Zakończ quiz"
