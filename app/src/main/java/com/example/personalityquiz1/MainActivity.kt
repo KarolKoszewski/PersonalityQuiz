@@ -39,6 +39,30 @@ class MainActivity : AppCompatActivity() {
         timePicker = findViewById(R.id.timePicker)
         koniecButton = findViewById(R.id.koniec)
 
+        koniecButton.setOnClickListener {
+            val selectedId = radioGroup.checkedRadioButtonId
+            val odpowiedzPytanie1 = if (selectedId != -1){
+                findViewById<RadioButton>(selectedId).text.toString()
+            } else {
+                "Brak odpowiedzi"
+            }
+
+            val kolory = mutableListOf<String>()
+            if(checkCzerwony.isChecked) kolory.add("Czerwony")
+            if(checkNiebieski.isChecked) kolory.add("Niebieski")
+            if(checkZielony.isChecked) kolory.add("Zielony")
+
+            val poziomPewnosci = seekPewnosc.progress
+
+            val dzien = datePicker.dayOfMonth
+            val miesiac = datePicker.month + 1
+            val rok = datePicker.year
+
+            val godzina = timePicker.hour
+            val minuta = timePicker.minute
+
+        }
+
     }
 
 
