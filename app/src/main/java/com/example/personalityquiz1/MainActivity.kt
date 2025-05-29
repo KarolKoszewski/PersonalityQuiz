@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
         datePicker = findViewById(R.id.datePicker)
         timePicker = findViewById(R.id.timePicker)
         koniecButton = findViewById(R.id.koniec)
-
+        val wynikTekst = findViewById<TextView>(R.id.wynikTekst)
         koniecButton.setOnClickListener {
             val selectedId = radioGroup.checkedRadioButtonId
             val odpowiedzPytanie1 = if (selectedId != -1){
@@ -61,7 +61,16 @@ class MainActivity : AppCompatActivity() {
             val godzina = timePicker.hour
             val minuta = timePicker.minute
 
+            val wynik = if(poziomPewnosci>5 && kolory?.contains("Czerwony") == true){
+                "Jestes ekstrowertykiem"
+            }else{
+                "Jestes introwertykiem"
+            }
+
+            wynikTekst.text = wynik
         }
+
+
 
     }
 

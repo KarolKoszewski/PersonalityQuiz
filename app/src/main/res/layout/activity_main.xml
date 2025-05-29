@@ -102,6 +102,11 @@
             android:layout_height="wrap_content"
             android:text="Zakończ quiz"
             android:layout_marginTop="16dp" />
-
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/wynikTekst"
+            android:text=""/>
     </LinearLayout>
+
 </ScrollView>
